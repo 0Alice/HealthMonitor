@@ -5,19 +5,43 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        //TextView tx=(TextView)findViewById(R.id.textView13);
+        //String j=null;
+        //j="aaa";
+        /*try {
+            JSONParser js=new JSONParser("//api.waqi.info/search/?token=0126d0b44551423b1d4c683a63c3be5c2d079953+&keyword=Pozna 1");
+            j=js.json.toString();
+
+        } catch (IOException e) {
+            j="blad1";
+            //e.printStackTrace();
+        } catch (JSONException e) {
+            j="blad2";
+            //e.printStackTrace();
+        }*/
+        //tx.setText(j);
+
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +50,28 @@ public class MainActivity extends AppCompatActivity {
                 //        .setAction("Action", null).show();
             }
         });
+
+
+
+
+        TextView tx=(TextView)findViewById(R.id.textView13);
+        String j=null;
+        j="aaa";
+        try {
+            JSONParser js=new JSONParser("https://api.waqi.info/feed/here/?token=0126d0b44551423b1d4c683a63c3be5c2d079953");
+            j=js.json.getString("status");
+
+        } catch (IOException e) {
+            j="blad1";
+            //e.printStackTrace();
+        } catch (JSONException e) {
+            j="blad2";
+            //e.printStackTrace();
+        }
+        tx.setText(j);
+
+
+
     }
 
     @Override

@@ -61,6 +61,7 @@ public class MyData extends AppCompatActivity implements AdapterView.OnItemSelec
                     bufferedWriter.write(data);
                     data=height.getText().toString();
                     bufferedWriter.write(data);
+
                     bufferedWriter.close();
                     fileWriter.close();
                 } catch (FileNotFoundException e){
