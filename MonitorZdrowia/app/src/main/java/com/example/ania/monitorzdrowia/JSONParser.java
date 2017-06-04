@@ -18,11 +18,14 @@ import java.nio.charset.Charset;
 
 public class JSONParser {
     JSONObject json;
+
+
+
     public JSONParser(){
     }
     public JSONParser(String url) throws IOException, JSONException {
         json = readJsonFromUrl(url);
-        System.out.println(json.toString());
+        //System.out.println(json.toString());
         //System.out.println(json.get("id"));
     }
 
