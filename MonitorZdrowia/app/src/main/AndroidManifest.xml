@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ania.monitorzdrowia">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -44,6 +44,15 @@
             android:name=".PesonalData"
             android:label="@string/title_activity_pesonal_data"
             android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ania.monitorzdrowia.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Bmi"
+            android:label="@string/title_activity_bmi"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ania.monitorzdrowia.MainActivity" />

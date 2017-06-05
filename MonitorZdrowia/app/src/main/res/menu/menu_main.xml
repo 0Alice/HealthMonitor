@@ -16,4 +16,11 @@
         android:title="@string/pref_header_history"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/pref_header_bmi"
+        android:orderInCategory="101"
+        android:title="@string/pref_title_bmi1"
+        app:showAsAction="never" />
+
+
 </menu>

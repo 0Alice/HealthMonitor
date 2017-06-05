@@ -4,6 +4,7 @@ package com.example.ania.monitorzdrowia;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -214,19 +215,34 @@ public class PesonalData extends AppCompatPreferenceActivity {
     public static class HealthPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
+           /*
+            Preference height;
+            Preference weight;
+            int bmi;*/
+
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_health);
             setHasOptionsMenu(true);
+
+            /*SharedPreferences preference=getSharedPreferences("text_bmi");
+            height= findPreference("example_text2");
+            weight=findPreference("text_weight");
+            int h=Integer.parseInt(height.getContext().get.toString());
+            int w=Integer.parseInt(weight.toString());*/
+           // bmi=Integer.parseInt(height.toString())/Integer.parseInt(weight.toString());
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
+            //Wyswietlanie pod nazwa wartosci
+
             bindPreferenceSummaryToValue(findPreference("sync_frequency"));
             bindPreferenceSummaryToValue(findPreference("text_pressure"));
             bindPreferenceSummaryToValue(findPreference("text_tempreture"));
             bindPreferenceSummaryToValue(findPreference("text_weight"));
-            bindPreferenceSummaryToValue(findPreference("text_bmi"));
+
+           // preference.setDefaultValue(bmi);
         }
 
         @Override

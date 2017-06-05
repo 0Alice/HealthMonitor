@@ -102,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentSettings=new Intent(this,PesonalData.class);
                 startActivity(intentSettings);
                 return true;
+            case R.id.pref_header_bmi:
+                Intent intentSettings1=new Intent(this,Bmi.class);
+                startActivity(intentSettings1);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
