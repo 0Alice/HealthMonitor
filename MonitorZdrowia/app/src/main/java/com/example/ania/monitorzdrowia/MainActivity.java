@@ -29,9 +29,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-TextView textView;
-    JSONParser js;
-    String temp;
+
     ProgressBar mProgressBar;
     TextView temper;
     TextView wind;
@@ -57,95 +55,13 @@ TextView textView;
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
 
        if (isOnline()){
-           //temper.setText("ania");
             DownloadData task = new DownloadData();
             task.execute();
         }else{
             mProgressBar.setVisibility(View.GONE);
             Toast.makeText(MainActivity.this.getApplicationContext(), "Aby pobierać dane, musisz się połączyć z siecią!", Toast.LENGTH_SHORT).show();
         }
-
-        //TextView tx=(TextView)findViewById(R.id.textView13);
-        //String j=null;
-        //j="aaa";
-        /*try {
-            JSONParser js=new JSONParser("//api.waqi.info/search/?token=0126d0b44551423b1d4c683a63c3be5c2d079953+&keyword=Pozna 1");
-            j=js.json.toString();
-
-        } catch (IOException e) {
-            j="blad1";
-            //e.printStackTrace();
-        } catch (JSONException e) {
-            j="blad2";
-            //e.printStackTrace();
-        }*/
-        //tx.setText(j);
-
-
-
-
-
-       // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-           // @Override
-          // public void onClick(View view) {
-               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
-           // }
-      //  });
-
-
-
-
-       // textView=(TextView)findViewById(R.id.textView13);
-      //  String j="aaa";
-/*
-        try {
-             js=new JSONParser("https://api.waqi.info/feed/here/?token=0126d0b44551423b1d4c683a63c3be5c2d079953");
-            //j=js.json.getString("status");
-
-        } catch (IOException e) {
-            j="blad1";
-            //e.printStackTrace();
-        } catch (JSONException e) {
-            j="blad2";
-            //e.printStackTrace();
-        }*/
-        //textView.setText(j);
-
-
-        /**Ania json api*/
-/*
-        HttpURLConnection connection=null;
-        try{
-            URL url=new URL("//api.waqi.info/search/?token="+"0126d0b44551423b1d4c683a63c3be5c2d079953"+"&keyword="+"Poznań 1 ul. Polanka");
-            connection=(HttpURLConnection) url.openConnection();
-            connection.connect();
-            int status=connection.getResponseCode();
-            Log.d("connection","status"+status);
-            InputStream inputStream=connection.getInputStream();
-            BufferedReader reader=new BufferedReader(new InputStreamReader(inputStream));
-            String responseString;
-            StringBuilder stringBuilder=new StringBuilder();
-            while ((responseString=reader.readLine())!=null){
-                stringBuilder=stringBuilder.append(responseString);
-            }
-            temp=stringBuilder.toString();
-            Log.d("connection",temp);
         }
-        catch (MalformedURLException e){
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            JSONObject jsonObject=new JSONObject(temp);
-            String t=(String) jsonObject.optString("t");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-*/
-    }
 
 
     public boolean isOnline() {
@@ -193,8 +109,8 @@ TextView textView;
     }
 
     public void show(String t,String w,String p,String h,String pm10,String pm25) {
-      temper.setText(t);
-wind.setText(w);
+        temper.setText(t);
+        wind.setText(w);
         pre.setText(p);
         hyd.setText(h);
         pm1.setText(pm10);
@@ -202,8 +118,9 @@ wind.setText(w);
     }
 
 
-//Pobieranie danych
 
+
+//Pobieranie danych
 
 private class DownloadData extends AsyncTask<String , String , Long > {
 
@@ -262,9 +179,9 @@ private class DownloadData extends AsyncTask<String , String , Long > {
                 h=(String) jsonObject.getJSONObject("data").getJSONObject("iaqi").getJSONObject("h").optString("v","blad");
                 pm10=(String) jsonObject.getJSONObject("data").getJSONObject("iaqi").getJSONObject("pm10").optString("v","blad");
                 pm25=(String) jsonObject.getJSONObject("data").getJSONObject("iaqi").getJSONObject("pm25").optString("v","blad");
-                isPublic=(Boolean) jsonObject.optBoolean("ispublic", false);
-                isFriend=(Boolean) jsonObject.optBoolean("isfriend", false);
-                isFamily=(Boolean) jsonObject.optBoolean("isfamily", false);
+                //isPublic=(Boolean) jsonObject.optBoolean("ispublic", false);
+                //isFriend=(Boolean) jsonObject.optBoolean("isfriend", false);
+                //isFamily=(Boolean) jsonObject.optBoolean("isfamily", false);
                 return (0l);
             }else{
                 return (1l);
