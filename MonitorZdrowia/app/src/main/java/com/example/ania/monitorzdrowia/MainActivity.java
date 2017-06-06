@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
            case R.id.pref_header_plot:
-                Intent intentHealth=new Intent(this,Plot.class);
+                Intent intentHealth=new Intent(this,TempPlot.class);
                 startActivity(intentHealth);
                 return true;
             case R.id.title_activity_pesonal_data:

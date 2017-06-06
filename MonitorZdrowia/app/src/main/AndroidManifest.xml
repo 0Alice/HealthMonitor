@@ -58,8 +58,8 @@
                 android:value="com.example.ania.monitorzdrowia.MainActivity" />
         </activity>
         <activity
-            android:name=".Plot"
-            android:label="@string/title_activity_plot"
+            android:name=".TempPlot"
+            android:label="@string/title_activity_temp_plot"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
