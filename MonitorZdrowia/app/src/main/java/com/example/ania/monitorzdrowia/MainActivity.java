@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     TextView pm1;
     TextView pm2;
     TextView pre;
+    TextView adv;
 
     public final static String API_KEY ="0126d0b44551423b1d4c683a63c3be5c2d079953";
     public final static String  CITY ="Poznań 1 ul. Polanka";
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         pm1=(TextView)findViewById(R.id.textView9);
         pm2=(TextView)findViewById(R.id.textView11);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
+        adv=(TextView) findViewById(R.id.textView17);
 
        if (isOnline()){
             DownloadData task = new DownloadData();
@@ -133,6 +135,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    public void check(Double t) {
+        if (t > 20) {
+            adv.setText("Dzisiaj jest ciepło.");
+        } else if (t > 15) {
+            adv.setText("Załóż kurtkę, jest chłodno.");
+        } else if (t > 5) {
+            adv.setText("Ubierz się ciepło.");
+        } else if (t > 0) {
+            adv.setText("Zimno, załóż czapkę i rękawiczki.");
+        } else if (t > (-5)) {
+            adv.setText("Mróz, może padać śnieg. Czapka i rekawiczki obowiązkowo!");
+        } else {
+            adv.setText("Bardzo zimno, najlepiej nie wychodź z domu.");
+        }
+    }
+
+
+
+
+
+
 
 //Pobieranie danych
 
@@ -156,7 +179,7 @@ private class DownloadData extends AsyncTask<String , String , Long > {
     protected void onPostExecute(Long result) {
         if (result==0){
             show(t,w,p,h,pm10,pm25);
-
+check(Double.parseDouble(t));
         }else{
             Toast.makeText(MainActivity.this.getApplicationContext(), "Coś poszło źle!", Toast.LENGTH_SHORT).show();
         }
