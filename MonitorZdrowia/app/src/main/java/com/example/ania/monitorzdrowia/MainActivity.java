@@ -1,18 +1,18 @@
 package com.example.ania.monitorzdrowia;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -131,6 +132,16 @@ public class MainActivity extends AppCompatActivity {
         hyd.setText(h);
         pm1.setText(pm10);
         pm2.setText(pm25);
+        File file=new File(this.getFilesDir(),"temperature.txt");
+        DataToHistory d=new DataToHistory(file,t);
+        File file2=new File(this.getFilesDir(),"pm10.txt");
+        DataToHistory d2=new DataToHistory(file2,pm10);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String we=preferences.getString("text_weight","1");
+
+        File file3=new File(this.getFilesDir(),"weight.txt");
+        DataToHistory d3=new DataToHistory(file3,we);
     }
 
 

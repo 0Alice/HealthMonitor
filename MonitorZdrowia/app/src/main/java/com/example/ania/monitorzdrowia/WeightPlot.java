@@ -7,6 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.LineData;
+
+import java.io.File;
+
 public class WeightPlot extends AppCompatActivity {
 
     @Override
@@ -25,6 +30,13 @@ public class WeightPlot extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        File file=new File(this.getFilesDir(),"weight.txt");
+        LineData lineData=new LineData();
+        DataToHistory d=new DataToHistory(file,"waga",lineData,97);
+        LineChart chart = (LineChart) findViewById(R.id.chartwei);
+        chart.setData(d.lineData);
+        chart.invalidate();
     }
 
 }
