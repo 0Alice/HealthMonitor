@@ -94,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
 
-           /* case R.id.actual_health:
-                Intent intentHealth=new Intent(this,Health.class);
+           case R.id.pref_header_plot:
+                Intent intentHealth=new Intent(this,Plot.class);
                 startActivity(intentHealth);
-                return true;*/
+                return true;
             case R.id.title_activity_pesonal_data:
                 Intent intentSettings=new Intent(this,PesonalData.class);
                 startActivity(intentSettings);

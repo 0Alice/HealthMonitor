@@ -12,9 +12,6 @@
         android:icon="@android:drawable/ic_menu_view"
         android:title="@string/pref_header_health" />
 
-    <header
-        android:fragment="com.example.ania.monitorzdrowia.PesonalData$HistoryPreferenceFragment"
-        android:icon="@android:drawable/ic_menu_recent_history"
-        android:title="@string/pref_header_history" />
+
 
 </preference-headers>

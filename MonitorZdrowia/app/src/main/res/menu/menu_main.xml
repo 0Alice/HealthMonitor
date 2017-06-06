@@ -11,9 +11,9 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/pref_header_history"
+        android:id="@+id/pref_header_plot"
         android:orderInCategory="100"
-        android:title="@string/pref_header_history"
+        android:title="@string/pref_header_plot"
         app:showAsAction="never" />
 
     <item
