@@ -102,6 +102,31 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ania.monitorzdrowia.MainActivity" />
         </activity>
+        <activity android:name=".D1" />
+        <activity
+            android:name=".d0"
+            android:label="@string/title_activity_d0"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ania.monitorzdrowia.MainActivity" />
+        </activity>
+        <activity android:name=".D3" />
+        <activity android:name=".D4" />
+        <activity android:name=".D5" />
+        <activity android:name=".D6" />
+        <activity android:name=".D7" />
+        <activity android:name=".D8" />
+        <activity android:name=".D9" />
+        <activity android:name=".DEnd" />
+        <activity android:name=".D2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

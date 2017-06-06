@@ -128,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent4=new Intent(this,ExercisesPain.class);
                 startActivity(intent4);
                 return true;
+            case R.id.dalt:
+                Intent intent5=new Intent(this,d0.class);
+                startActivity(intent5);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

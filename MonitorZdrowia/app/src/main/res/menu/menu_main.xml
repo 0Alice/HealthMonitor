@@ -46,4 +46,10 @@
         android:orderInCategory="105"
         android:title="@string/title_activity_exercises_pain"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/dalt"
+        android:orderInCategory="106"
+        android:title="@string/title_activity_d0"
+        app:showAsAction="never" />
 </menu>

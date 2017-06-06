@@ -99,4 +99,8 @@
     <string name="title_activity_exercises_overweight">Ćwiczenia (nadwaga)</string>
     <string name="title_activity_exercises_overweight1">Ćwiczenia (nadwaga)</string>
     <string name="title_activity_exercises_pain">Ćwiczenia (kręgosłup)</string>
+    <string name="title_activity_d0">Test na daltonizm</string>
+    <string name="start_test">Zacznij test</string>
+    <string name="question">Jaka liczba jest na obrazku?</string>
+    <string name="next">Dalej</string>
 </resources>
