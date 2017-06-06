@@ -119,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentSettings1=new Intent(this,Bmi.class);
                 startActivity(intentSettings1);
                 return true;
+            case R.id.header_over:
+                Intent intent3=new Intent(this,ExercisesOverweight.class);
+                startActivity(intent3);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

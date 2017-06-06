@@ -96,5 +96,6 @@
     <string name="title_activity_temp_plot">Wykres temperatury</string>
     <string name="title_activity_pollution">Zanieczyszczenie</string>
     <string name="title_activity_weight_plot">Wykres wagi</string>
-
+    <string name="title_activity_exercises_overweight">Ćwiczenia (nadwaga)</string>
+    <string name="title_activity_exercises_overweight1">Ćwiczenia (nadwaga)</string>
 </resources>
