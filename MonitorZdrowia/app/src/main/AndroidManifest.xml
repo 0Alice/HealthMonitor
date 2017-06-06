@@ -66,6 +66,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ania.monitorzdrowia.MainActivity" />
         </activity>
+        <activity
+            android:name=".Pollution"
+            android:label="@string/title_activity_pollution"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ania.monitorzdrowia.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WeightPlot"
+            android:label="@string/title_activity_weight_plot"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ania.monitorzdrowia.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

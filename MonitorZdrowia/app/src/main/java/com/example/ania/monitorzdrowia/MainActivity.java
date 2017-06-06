@@ -94,6 +94,16 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
 
+
+
+            case R.id.pref_header_plot_pm:
+                Intent intent2=new Intent(this,Pollution.class);
+                startActivity(intent2);
+                return true;
+            case R.id.pref_header_plot_w:
+                Intent intent1=new Intent(this,WeightPlot.class);
+                startActivity(intent1);
+                return true;
            case R.id.pref_header_plot:
                 Intent intentHealth=new Intent(this,TempPlot.class);
                 startActivity(intentHealth);

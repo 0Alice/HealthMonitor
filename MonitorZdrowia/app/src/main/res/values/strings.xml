@@ -18,6 +18,8 @@
     <string name="feeling">Samopoczucie</string>
     <string name="title_activity_pesonal_data">Moje Dane</string>
     <string name="advice">Porada</string>
+    <string name="pref_header_plot_w">Wykres wagi</string>
+    <string name="pref_header_plot_pm">Zanieczyszczenie</string>
 
     <!-- Strings related to Main -->
 
@@ -92,5 +94,7 @@
     <string name="title_activity_bmi">BMI</string>
     <string name="title_activity_plot">Wykresy</string>
     <string name="title_activity_temp_plot">Wykres temperatury</string>
+    <string name="title_activity_pollution">Zanieczyszczenie</string>
+    <string name="title_activity_weight_plot">Wykres wagi</string>
 
 </resources>
