@@ -93,6 +93,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ania.monitorzdrowia.MainActivity" />
         </activity>
+        <activity
+            android:name=".ExercisesPain"
+            android:label="@string/title_activity_exercises_pain"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ania.monitorzdrowia.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

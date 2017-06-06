@@ -40,4 +40,10 @@
         android:title="@string/title_activity_exercises_overweight1"
         app:showAsAction="never" />
 
+
+    <item
+        android:id="@+id/exercises_pain"
+        android:orderInCategory="105"
+        android:title="@string/title_activity_exercises_pain"
+        app:showAsAction="never" />
 </menu>

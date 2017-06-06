@@ -124,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent3);
                 return true;
 
+            case R.id.exercises_pain:
+                Intent intent4=new Intent(this,ExercisesPain.class);
+                startActivity(intent4);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

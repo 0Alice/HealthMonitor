@@ -98,4 +98,5 @@
     <string name="title_activity_weight_plot">Wykres wagi</string>
     <string name="title_activity_exercises_overweight">Ćwiczenia (nadwaga)</string>
     <string name="title_activity_exercises_overweight1">Ćwiczenia (nadwaga)</string>
+    <string name="title_activity_exercises_pain">Ćwiczenia (kręgosłup)</string>
 </resources>
